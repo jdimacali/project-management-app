@@ -10,3 +10,20 @@ export const GET_PROJECTS = gql`
     }
   }
 `;
+
+export const GET_PROJECT = gql`
+  #graphql
+  query getProject($id: ID!) {
+    project(id: $id) {
+      id
+      name
+      status
+      client {
+        id
+        name
+        email
+        phone
+      }
+    }
+  }
+`;
