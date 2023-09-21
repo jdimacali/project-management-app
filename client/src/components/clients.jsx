@@ -1,27 +1,13 @@
-import { gql, useQuery } from "@apollo/client";
-import ClientRow from "./client-row";
+import { useQuery } from "@apollo/client";
 
-const GET_CLIENTS = gql`
-  #graphql
-  query getClients {
-    clients {
-      id
-      name
-      email
-      phone
-    }
-  }
-`;
+import ClientRow from "./client-row";
+import { GET_CLIENTS } from "../queries/clientQueries";
+import Spinner from "./spinner";
 
 const Clients = () => {
   const { loading, error, data } = useQuery(GET_CLIENTS);
 
-  if (loading)
-    return (
-      <div className="spinner-border" role="status">
-        <span className="visually-hidden">Loading...</span>
-      </div>
-    );
+  if (loading) return <Spinner />;
   if (error) return <h1> Something went wrong </h1>;
 
   return (
