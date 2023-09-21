@@ -4,6 +4,8 @@ import Spinner from "../components/spinner";
 import { useQuery } from "@apollo/client";
 import { GET_PROJECT } from "../queries/projectQueries";
 import ClientInfo from "../components/client-info";
+import DeleteProjectButton from "../components/delete-project-button";
+import EditProjectForm from "../components/edit-project-form";
 
 export default function Project() {
   const { id } = useParams();
@@ -27,6 +29,9 @@ export default function Project() {
           <p className="lead">{data.project.status}</p>
 
           <ClientInfo client={data.project.client} />
+          {/* TODO: Add a button for editing the project */}
+          <EditProjectForm project={data.project} />
+          <DeleteProjectButton projectId={data.project.id} />
         </div>
       )}
     </>
