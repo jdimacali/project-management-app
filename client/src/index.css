@@ -1,0 +1,56 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 600;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.navbar-brand {
+  color: #df3ca6;
+}
+
+.navbar-brand img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.navbar-brand div {
+  font-weight: 600;
+}
+
+.btn {
+  font-size: 15px;
+}
+
+.btn-primary,
+.bg-primary {
+  background-color: #df3ca6 !important;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #df3ca6;
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: #7430f9;
+}
+
+.btn-secondary:hover {
+  background-color: #7430f9;
+  opacity: 0.9;
+}
+
+.icon {
+  margin-right: 5px;
+}
